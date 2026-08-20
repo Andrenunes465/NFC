@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ALTERE AQUI: Título da aba do navegador -->
+
+  <title>Loja Cida Toledo - Contato</title>
+
+  
+
+  <style>
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+    /* Fundo da tela: Marrom Claro / Bege Quente */
+
+    body { background-color: #D8C4B0; color: #FFFFFF; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+
+    /* Fundo do cartão: Marrom Intermediário Sofisticado */
+
+    .card { background: #6C3E24; width: 100%; max-width: 380px; padding: 30px 20px; border-radius: 20px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15); border: 1px solid #8C5332; }
+
+    /* Borda da foto na cor bege da logo */
+
+    .avatar { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #E5D1B8; }
+
+    /* Título principal: Branco Puro */
+
+    h1 { font-size: 1.35rem; margin-bottom: 6px; color: #FFFFFF; }
+
+    /* Bio: Bege Claro */
+
+    p.bio { font-size: 0.9rem; color: #F3E8DC; margin-bottom: 24px; }
+
+    .links-container { display: flex; flex-direction: column; gap: 12px; }
+
+    .btn { display: flex; align-items: center; justify-content: center; padding: 14px; border-radius: 12px; color: #fff; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: transform 0.1s ease; }
+
+    .btn:active { transform: scale(0.98); }
+
+    /* Cores de botões oficiais permanecem para identificação rápida */
+
+    .btn-whats { background-color: #25D366; }
+
+    .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+
+    .btn-maps { background-color: #ea4335; }
+
+    .btn-pix { background-color: #00bdae; cursor: pointer; border: none; width: 100%; }
+
+    /* Rodapé sutil: Bege Suave */
+
+    .footer { margin-top: 25px; font-size: 0.75rem; color: #E2C9B4; }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <div class="card">
+
+    <!-- ALTERE AQUI: Link direto da logo/foto da empresa (ou remova a tag <img> se não tiver) -->
+
+    <img class="avatar" src="96f8c8fa-5c82-4d3a-af8a-ff2607b9dafd-removebg-preview.png" alt="Logo da Empresa">
+
+
+
+    <!-- ALTERE AQUI: Nome da Empresa e Ramo de Atuação -->
+
+    <h1>Loja Cida Toledo</h1>
+
+    <p class="bio">Na Cida Toledo Moda Feminina,você encontra estilo,elegância e peças que valorizam a sua beleza. Venha nos fazer uma visita e descubra as novidades da nossa loja!</p>
+
+
+
+    <div class="links-container">
+
+      <!-- ALTERE AQUI: WhatsApp (Coloque DDI 55 + DDD + Número sem espaços nem traços) -->
+
+      <a class="btn btn-whats" href="https://wa.me/5562983231545?text=Ol%C3%A1,%20gostaria%20de%20um%20atendimento!" target="_blank">
+
+        💬 Falar no WhatsApp
+
+      </a>
+
+
+
+      <!-- ALTERE AQUI: Usuário do Instagram sem o @ -->
+
+      <a class="btn btn-insta" href="https://instagram.com/lojacidatoledo" target="_blank">
+
+        📸 Seguir no Instagram
+
+      </a>
+
+
+
+      <!-- ALTERE AQUI: Link compartilhado do Google Maps -->
+
+      <a class="btn btn-maps" href="https://maps.app.goo.gl/GtuDYUM1zVaT72L49" target="_blank">
+
+        📍 Como Chegar (Localização)
+
+      </a>
+
+
+
+      <!-- ALTERE AQUI: Chave PIX da empresa -->
+
+      <button class="btn btn-pix" onclick="copiarPix('contato@barbeariasilva.com.br')">
+
+        💳 Copiar Chave PIX
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+
+  <script>
+
+    function copiarPix(chave) {
+
+      navigator.clipboard.writeText(chave).then(() => {
+
+        alert('Chave PIX copiada com sucesso: ' + chave);
+
+      });
+
+    }
+
+  </script>
+
+
+
+</body>
+
+</html>
