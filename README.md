@@ -1,2 +1,2 @@
 # NFC
-Sistema de identificação e divulgação digital através de tags NFC, permitindo que empresas tenham páginas personalizadas com acesso rápido a Instagram, WhatsApp, localização e outros canais de contato.
+A minha missão e unir tecnologia por aproximação (NFC) e páginas web personalizadas para modernizar a experiência de atendimento e divulgação de marcas. Seja em um balcão de loja, na mesa de um restaurante, na credencial de um evento ou no chaveiro do dia a dia, entrego acesso imediato a cardápios, redes sociais, contatos e pagamentos sem necessidade de baixar aplicativos. Mais agilidade para o estabelecimento e conveniência absoluta para o cliente.
