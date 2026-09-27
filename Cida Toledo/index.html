@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- ALTERE AQUI: Título da aba do navegador -->
   <title>Loja Cida Toledo - Contato</title>
 
   <style>
@@ -29,7 +28,7 @@
       padding: 40px 20px; 
     }
 
-    /* Camada de escurecimento suave para destacar a foto e o cartão */
+    /* Camada de escurecimento bem leve no fundo para dar contraste */
     body::before {
       content: '';
       position: fixed;
@@ -37,23 +36,24 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.35); /* Escurece 35% o fundo */
+      background: rgba(0, 0, 0, 0.2); 
       z-index: 1;
     }
 
-    /* Fundo do cartão: Marrom Sofisticado com leve transparência */
+    /* CARTÃO MARROM MAIS TRANSPARENTE E ESTILO VIDRO FOSCO */
     .card { 
       position: relative;
       z-index: 2;
-      background: rgba(108, 62, 36, 0.93); /* Marrom com transparência elegante */
-      backdrop-filter: blur(8px); /* Efeito de vidro fosco moderno */
+      background: rgba(108, 62, 36, 0.55); /* Transparência aumentada */
+      -webkit-backdrop-filter: blur(12px); /* Suporte para Safari */
+      backdrop-filter: blur(12px); /* Efeito vidro fosco suave */
       width: 100%; 
       max-width: 380px; 
       padding: 30px 20px; 
       border-radius: 20px; 
       text-align: center; 
-      box-shadow: 0 15px 35px rgba(0,0,0,0.3); 
-      border: 1px solid rgba(255, 255, 255, 0.15); 
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25); 
+      border: 1px solid rgba(255, 255, 255, 0.25); 
     }
 
     /* Borda da foto na cor bege da logo */
@@ -68,10 +68,21 @@
     }
 
     /* Título principal: Branco Puro */
-    h1 { font-size: 1.35rem; margin-bottom: 6px; color: #FFFFFF; }
+    h1 { 
+      font-size: 1.35rem; 
+      margin-bottom: 6px; 
+      color: #FFFFFF; 
+      text-shadow: 0 2px 4px rgba(0,0,0,0.4); 
+    }
 
     /* Bio: Bege Claro */
-    p.bio { font-size: 0.9rem; color: #F3E8DC; margin-bottom: 24px; line-height: 1.4; }
+    p.bio { 
+      font-size: 0.9rem; 
+      color: #F3E8DC; 
+      margin-bottom: 24px; 
+      line-height: 1.4; 
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5); 
+    }
 
     .links-container { display: flex; flex-direction: column; gap: 12px; }
 
@@ -86,42 +97,38 @@
       font-weight: 600; 
       font-size: 0.95rem; 
       transition: transform 0.1s ease; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
     .btn:active { transform: scale(0.98); }
 
-    /* Cores de botões oficiais permanecem para identificação rápida */
+    /* Cores dos botões */
     .btn-whats { background-color: #25D366; }
     .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
     .btn-maps { background-color: #ea4335; }
-    .btn-review { background-color: #4285F4; } /* Cor do botão de avaliação do Google */
+    .btn-review { background-color: #4285F4; }
     .btn-pix { background-color: #00bdae; cursor: pointer; border: none; width: 100%; }
 
-    /* Rodapé sutil: Bege Suave */
+    /* Rodapé sutil */
     .footer { margin-top: 25px; font-size: 0.75rem; color: #E2C9B4; }
   </style>
 </head>
 <body>
 
   <div class="card">
-    <!-- ALTERE AQUI: Link direto da logo/foto da empresa (ou remova a tag <img> se não tiver) -->
     <img class="avatar" src="Logo.png" alt="Logo da Empresa">
 
-    <!-- ALTERE AQUI: Nome da Empresa e Ramo de Atuação -->
     <h1>Loja Cida Toledo</h1>
-    <p class="bio">Na Cida Toledo Moda Feminina,você encontra estilo,elegância e peças que valorizam a sua beleza. Venha nos fazer uma visita e descubra as novidades da nossa loja!</p>
+    <p class="bio">Na Cida Toledo Moda Feminina, você encontra estilo, elegância e peças que valorizam a sua beleza. Venha nos fazer uma visita e descubra as novidades da nossa loja!</p>
 
     <div class="links-container">
-      <!-- ALTERE AQUI: WhatsApp (Coloque DDI 55 + DDD + Número sem espaços nem traços) -->
       <a class="btn btn-whats" href="https://wa.me/5562983231545?text=Ol%C3%A1,%20gostaria%20de%20um%20atendimento!" target="_blank">
         💬 Falar no WhatsApp
       </a>
 
-      <!-- ALTERE AQUI: Usuário do Instagram sem o @ -->
       <a class="btn btn-insta" href="https://instagram.com/lojacidatoledo" target="_blank">
         📸 Seguir no Instagram
       </a>
 
-      <!-- ALTERE AQUI: Link compartilhado do Google Maps -->
       <a class="btn btn-maps" href="https://maps.app.goo.gl/GtuDYUM1zVaT72L49" target="_blank">
         📍 Como Chegar (Localização)
       </a>
@@ -132,7 +139,6 @@
         ⭐ Avalie nossa loja no Google
       </a>
 
-      <!-- ALTERE AQUI: Chave PIX da empresa -->
       <button class="btn btn-pix" onclick="copiarPix('62983231545')">
         💳 Copiar Chave PIX
       </button>
