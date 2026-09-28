@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Cida Toledo - Contato</title>
 
+  <style>
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+    }
+
+    /* FUNDO FIXO DA PÁGINA (Efeito Parallax com a imagem do seu GitHub) */
+    body { 
+      background-image: url('WhatsApp Image 2026-09-27 at 20.34.13.jpeg'); 
+      background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #FFFFFF; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      min-height: 100vh; 
+      padding: 40px 20px; 
+    }
+
+    /* Camada de escurecimento bem leve no fundo para dar contraste */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2); 
+      z-index: 1;
+    }
+
+    /* CARTÃO MARROM MAIS TRANSPARENTE E ESTILO VIDRO FOSCO */
+    .card { 
+      position: relative;
+      z-index: 2;
+      background: rgba(108, 62, 36, 0.55); /* Transparência aumentada */
+      -webkit-backdrop-filter: blur(12px); /* Suporte para Safari */
+      backdrop-filter: blur(12px); /* Efeito vidro fosco suave */
+      width: 100%; 
+      max-width: 380px; 
+      padding: 30px 20px; 
+      border-radius: 20px; 
+      text-align: center; 
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25); 
+      border: 1px solid rgba(255, 255, 255, 0.25); 
+    }
+
+    /* Borda da foto na cor bege da logo */
+    .avatar { 
+      width: 100px; 
+      height: 100px; 
+      border-radius: 50%; 
+      object-fit: cover; 
+      transform: scale(1.75); 
+      margin: 15px auto 25px auto; 
+      display: block; 
+    }
+
+    /* Título principal: Branco Puro */
+    h1 { 
+      font-size: 1.35rem; 
+      margin-bottom: 6px; 
+      color: #FFFFFF; 
+      text-shadow: 0 2px 4px rgba(0,0,0,0.4); 
+    }
+
+    /* Bio: Bege Claro */
+    p.bio { 
+      font-size: 0.9rem; 
+      color: #F3E8DC; 
+      margin-bottom: 24px; 
+      line-height: 1.4; 
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5); 
+    }
+
+    .links-container { display: flex; flex-direction: column; gap: 12px; }
+
+    .btn { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      padding: 14px; 
+      border-radius: 12px; 
+      color: #fff; 
+      text-decoration: none; 
+      font-weight: 600; 
+      font-size: 0.95rem; 
+      transition: transform 0.1s ease; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .btn:active { transform: scale(0.98); }
+
+    /* Cores dos botões */
+    .btn-whats { background-color: #25D366; }
+    .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .btn-maps { background-color: #ea4335; }
+    .btn-review { background-color: #4285F4; }
+    .btn-pix { background-color: #00bdae; cursor: pointer; border: none; width: 100%; }
+
+    /* Rodapé sutil */
+    .footer { margin-top: 25px; font-size: 0.75rem; color: #E2C9B4; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img class="avatar" src="Logo.png" alt="Logo da Empresa">
+
+    <h1>Drogaria São Geraldo</h1>
+    <p class="bio">Na Drogaria São Geraldo, você encontra saúde, perfumaria, cuidado e o atendimento que a sua família merece. Venha nos fazer uma visita e confira nossas ofertas e novidades!</p>
+
+    <div class="links-container">
+      <a class="btn btn-whats" href="https://wa.me/5562983231545?text=Ol%C3%A1,%20gostaria%20de%20um%20atendimento!" target="_blank">
+        💬 Falar no WhatsApp
+      </a>
+
+      <a class="btn btn-insta" href="https://instagram.com/lojacidatoledo" target="_blank">
+        📸 Seguir no Instagram
+      </a>
+
+      <a class="btn btn-maps" href="https://maps.app.goo.gl/GtuDYUM1zVaT72L49" target="_blank">
+        📍 Como Chegar (Localização)
+      </a>
+
+      <a class="btn btn-review" 
+         href="https://www.google.com.br/maps/place/Loja+Cida+Toledo+moda+feminina/@-16.3376569,-48.9405724,799m/data=!3m2!1e3!4m6!3m5!1s0x935ea53e8027b8d3:0x978298c216b3c56e!8m2!3d-16.3376569!4d-48.9379975!16s%2Fg%2F11r_y4q68t" 
+         target="_blank">
+        ⭐ Avalie nossa loja no Google
+      </a>
+
+      <button class="btn btn-pix" onclick="copiarPix('62983231545')">
+        💳 Copiar Chave PIX
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function copiarPix(chave) {
+      navigator.clipboard.writeText(chave).then(() => {
+        alert('Chave PIX copiada com sucesso: ' + chave);
+      });
+    }
+  </script>
+</body>
+</html>
